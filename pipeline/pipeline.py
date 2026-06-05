@@ -6,6 +6,7 @@ day = int(sys.argv[1])
 print(f"Running pipeline for day {day}")
 
 import pandas as pd
+# Here you would have your actual data processing logic. For demonstration, we will just create a simple DataFrame.
 
 df = pd.DataFrame({"A": [1, 2], "B": [3, 4]})
 
