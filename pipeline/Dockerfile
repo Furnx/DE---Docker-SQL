@@ -12,4 +12,4 @@ RUN uv sync --locked
 
 COPY pipeline.py pipeline.py
 
-ENTRYPOINT ["uv", "run", "python", "pipeline.py"]
+ENTRYPOINT ["python", "pipeline.py"]
