@@ -5,6 +5,9 @@
 
 
 import pandas as pd
+from sqlalchemy import create_engine
+from tqdm.auto import tqdm
+
 
 # Read a sample of the data
 prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/'
@@ -110,7 +113,7 @@ get_ipython().system('uv add psycopg2-binary')
 # In[29]:
 
 
-from sqlalchemy import create_engine
+
 engine = create_engine('postgresql+psycopg://root:root@localhost:5432/ny_taxi')
 
 
@@ -147,7 +150,7 @@ get_ipython().system('uv add tdqm')
 # In[34]:
 
 
-from tqdm.auto import tqdm
+
 
 first = True
 
