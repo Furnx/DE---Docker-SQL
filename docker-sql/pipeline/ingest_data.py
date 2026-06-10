@@ -58,7 +58,7 @@ def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, ch
             dtype=dtype,
             parse_dates=parse_dates,
             iterator=True,
-            chunksize=100000
+            chunksize=chunksize
             )
     
     first = True
@@ -68,7 +68,7 @@ def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, ch
         if first:
         # Create table schema (no data)
             df_chunk.head(0).to_sql(
-                name="yellow_taxi_data",
+                name=target_table,
                 con=engine,
                 if_exists="replace"
             )
