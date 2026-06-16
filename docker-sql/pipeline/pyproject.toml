@@ -8,6 +8,7 @@ dependencies = [
     "pandas>=3.0.3",
     "pgcli>=4.5.0",
     "psycopg2-binary>=2.9.12",
+    "psycopg[binary]>=3.3.4",
     "pyarrow>=24.0.0",
     "sqlalchemy>=2.0.50",
     "tdqm>=0.0.1",
